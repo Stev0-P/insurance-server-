@@ -9,6 +9,8 @@ const PORT = process.env.PORT || 5000;
 app.use(express.static("public"));
 app.use(bodyParser.json({ limit: "500mb" }));
 
+console.log("server running on port" + PORT);
+
 app.post("/formAPI", async (req, res, next) => {
   const {
     regNumber,
